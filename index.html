@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+            overflow-y: auto;
+            background: #ffdde1;
+        }
+
+        /* Surprise Cover */
+        #cover {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff4e6c, #ff6e88);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 2rem;
+            z-index: 9999;
+            animation: none;
+        }
+
+        #cover h1 {
+            animation: pulse 1.5s infinite alternate;
+        }
+
+        @keyframes pulse {
+            from { transform: scale(1); opacity: 0.7; }
+            to { transform: scale(1.1); opacity: 1; }
+        }
+
+        /* Reveal Animation */
+        .hide-cover {
+            animation: uncover 2s ease forwards;
+        }
+
+        @keyframes uncover {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-100%); }
+        }
+
+        /* Actual Website */
+        #main-content {
+            opacity: 0;
+            animation: fadeIn 2s ease forwards;
+            animation-delay: 2s;
+            text-align: center;
+            padding-bottom: 50px;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        header {
+            padding: 70px 20px;
+            background: linear-gradient(135deg, #ff9a9e, #fecfef);
+            color: #000000;
+        }
+        header h1 {
+            font-size: 3rem;
+        }
+        .her-name {
+            color: #ff0000;
+            text-shadow: 0 0 20px #fff;
+        }
+
+        .card {
+            background: white;
+            margin: 30px auto;
+            padding: 30px;
+            border-radius: 20px;
+            max-width: 650px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            padding: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        @media (max-width: 600px) {
+            header h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Surprise Cover Page -->
+    <div id="cover">
+        <h1>I love You❤️</h1>
+    </div>
+
+
+    <div id="main-content">
+        <header>
+            <h1>Happy Birthday, <span class="her-name">My Beloved Queen</span> ❤️</h1>
+            <h3>You are the most special part of my life.</h3>
+        </header>
+
+        <div class="card">
+            <h3>
+                I love you so so much. Today is the special day. Your birthday. You are my true friend, and my beloved partner. I always want to stay with you. On this special day, I want to tell you that, I am always beside you no matter what. I love you forever my dear queen. I want to marry you. I dream of a beautiful future with you. Happy Birthday dear🎂
+            </h3>
+        </div>
+
+        <h2 style="margin-top:30px;">Our Memories</h2>
+        <div class="gallery">
+            <!-- Replace with your photos -->
+            <img src="./Birthday/one.jpg" alt="Photo 1">
+            <img src="./Birthday/two.jpg" alt="Photo 1">
+            <img src="./Birthday/three.jpg" alt="Photo 1">
+            <img src="./Birthday/four.jpg" alt="Photo 1">
+            <img src="./Birthday/five.jpg" alt="Photo 1">
+            <img src="./Birthday/six.jpg" alt="Photo 1">
+            <img src="./Birthday/seven.jpg" alt="Photo 1">
+            <img src="./Birthday/eight.jpg" alt="Photo 1">
+            <img src="./Birthday/nine.jpg" alt="Photo 1">
+            <img src="./Birthday/ten.jpg" alt="Photo 1">
+        </div>
+
+        <div class="card">
+            <h2>A Special Wish For You❤️</h2>
+            <h3>
+                No matter how many birthdays pass, my love for you keeps growing stronger.
+                You deserve all the happiness, laughter, and love in the world. You are evergreen, love of my life. Always stay happy. 
+            </h3>
+        </div>
+    </div>
+
+    <script>
+        window.onload = function() {
+            const cover = document.getElementById('cover');
+            cover.classList.add('hide-cover');
+            setTimeout(() => { cover.style.display = 'none'; }, 2000);
+        }
+    </script>
+</body>
+</html>
